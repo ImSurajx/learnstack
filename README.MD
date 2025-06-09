@@ -46,10 +46,6 @@ Instructor: **Hitesh Choudhary**
 
 ---
 
-## 🗂️ Structure
-> 📌 Folders will be added or expanded as I progress through the course.
----
-
 ## 📅 Progress
 
 ✅ Day-by-day commits  
