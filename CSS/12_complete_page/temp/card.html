@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Cards</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .card{
+            width: 400px;
+            height: 600px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            height: 50%;
+            border-radius: 20px;
+        }
+
+        .title{
+            font-size: 2rem;
+            margin: 5px;
+            text-align: justify;
+        }
+
+        .description{
+            font-size: small;
+            margin: 5px;
+            text-align: justify;
+        }
+
+        a{
+            text-decoration: none;
+            list-style-type: none;
+            color: white;
+        }
+        .button{
+            background-color: black;
+            border-radius: 10px;
+            padding: 20px 5px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        @media(min-width:0px) and (max-width: 625px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card{
+                margin: 30px;
+                width: 300px;
+            }
+        }    
+        
+        @media(min-width:625px){
+            .card{
+                margin: 30px;
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="cover">
+               <img src="./images/img-1.jpg" alt="">
+            </div>
+            <div class="title">
+                Project vs Product Mindset for new software engineers
+            </div>
+            <div class="description">
+                Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.
+            </div>
+            <div class="button">
+                <a href="https://www.youtube.com/watch?v=7W1me-WoWXo">Watch Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cover" class="youtube">
+            <img src="./images/img-2.jpg" alt="">
+            </div>
+            <div class="title">
+                Build a full stack project with NextJS, NextAuth, Imagekit and Mongodb
+            </div>
+            <div class="description">
+                Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.
+            </div>
+            <div class="button">
+                <a href="https://www.youtube.com/watch?v=c8Z73cVl6x4&t=2s">Watch Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cover" class="youtube">
+            <img src="./images/img3.jpg" alt="">
+            </div>
+            <div class="title">
+                A Common Production mistake in react Lorem ipsum dolor sit.
+            </div>
+            <div class="description">
+                Welcome to chai aur code, a coding/programming dedicated channel in Hindi language. Now you can learn best of programming concepts with industry standard practical guide in Hindi language.
+            </div>
+            <div class="button">
+                <a href="https://www.youtube.com/watch?v=UsNdgJY6tCY&t=1s">Watch Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
