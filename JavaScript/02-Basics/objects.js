@@ -72,9 +72,9 @@ let students = [
 ];
 
 console.log(students[0].name); // Suraj
-********************* Test *********************
+// ********************* Test *********************
+// object literals:
 
-object literals:
 const mySym = Symbol("key1");
 
 const JsUser = {
@@ -169,4 +169,65 @@ console.log(Object.entries(tinderUser));
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 console.log(tinderUser.hasOwnProperty('isLogged'));
 
+// ************************** Destructuring & JSON API **************************
 
+const course = {
+    courseName: "JavaScript Bootcamp",
+    coursePrice: "999",
+    courseInstructor: "Hitesh"
+}
+
+// destructuring objects: we are giving short name to a object propert so it can be usable whenever we want & our code looks clean
+const {courseInstructor: instructor} = course 
+console.log(instructor);
+
+// in react
+const navbar = ({company /* destructuring objects */}) => {
+
+}
+navbar(company = "suraj")
+
+// JSON File
+/*
+{
+  "login": "ImSurajx",
+  "id": 106401203,
+  "node_id": "U_kgDOBleNsw",
+  "avatar_url": "https://avatars.githubusercontent.com/u/106401203?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/ImSurajx",
+  "html_url": "https://github.com/ImSurajx",
+  "followers_url": "https://api.github.com/users/ImSurajx/followers",
+  "following_url": "https://api.github.com/users/ImSurajx/following{/other_user}",
+  "gists_url": "https://api.github.com/users/ImSurajx/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/ImSurajx/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/ImSurajx/subscriptions",
+  "organizations_url": "https://api.github.com/users/ImSurajx/orgs",
+  "repos_url": "https://api.github.com/users/ImSurajx/repos",
+  "events_url": "https://api.github.com/users/ImSurajx/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/ImSurajx/received_events",
+  "type": "User",
+  "user_view_type": "public",
+  "site_admin": false,
+  "name": "Suraj Kumar",
+  "company": null,
+  "blog": "",
+  "location": "New Delhi, India",
+  "email": null,
+  "hireable": null,
+  "bio": "👨‍💻 Passionate tech learner mastering 🌐 Full-Stack Dev & 🧠 DSA, exploring 🤖 AI/ML & 🪄 Gen AI — aiming to be a 🌟 top dev & build my own 🚀 tech company 💡",
+  "twitter_username": "ItSurajxD",
+  "public_repos": 5,
+  "public_gists": 0,
+  "followers": 8,
+  "following": 2,
+  "created_at": "2022-05-27T17:32:05Z",
+  "updated_at": "2025-07-14T07:49:48Z"
+}
+*/
+
+// API in form of Array
+
+/*
+{"results":[{"gender":"female","name":{"title":"Mrs","first":"Julie","last":"Poulsen"},"location":{"street":{"number":5592,"name":"Lyøvej"},"city":"Brøndby Strand","state":"Sjælland","country":"Denmark","postcode":28058,"coordinates":{"latitude":"-43.6319","longitude":"130.7026"},"timezone":{"offset":"-3:00","description":"Brazil, Buenos Aires, Georgetown"}},"email":"julie.poulsen@example.com","login":{"uuid":"7d55882c-31e7-430e-b5e9-970ec2c4b32b","username":"organicmeercat534","password":"treetop","salt":"f6Dnb6nu","md5":"1ed9b24065658b12e2a057f7e32bd5c9","sha1":"163256fe6c1bb61203088425284fae9efc3c92df","sha256":"5d166073593f68579e2d4363c6fb55166ed65159364916c022763b48f20b4b45"},"dob":{"date":"1945-03-21T23:53:35.041Z","age":80},"registered":{"date":"2020-03-20T14:12:15.111Z","age":5},"phone":"18272177","cell":"42781347","id":{"name":"CPR","value":"210345-6676"},"picture":{"large":"https://randomuser.me/api/portraits/women/78.jpg","medium":"https://randomuser.me/api/portraits/med/women/78.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/78.jpg"},"nat":"DK"}],"info":{"seed":"8baf70a48ac0b9a8","results":1,"page":1,"version":"1.4"}}
+*/
