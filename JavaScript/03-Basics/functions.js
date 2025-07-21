@@ -136,3 +136,35 @@ function loginUserMessage(username = "xyz"){
 }
 
 console.log(loginUserMessage("Suraj"));
+
+// passing multiple values
+function calculateCartPrice(val1, val2, ...num){ // rest opearator
+    return num; // 500 (val1, val2, ..num) or if (...num) [200, 400, 500]
+}
+
+// passing object into function
+const user = {
+    username: "Suraj Kumar",
+    prices: "199"
+}
+
+function handleObj(anyObj){
+    return console.log(`Username is ${anyObj.username} & price is ${anyObj.prices}`);
+}
+
+console.log(calculateCartPrice(200, 400, 500));
+handleObj(user);
+handleObj({
+    username: "Sam",
+    price: "$399"
+})
+
+// passing array into function
+const myArray = [200, 300, 400, 500, 500];
+
+function returnSecondValue(getArray){
+    return (getArray[1]);
+}
+
+// returnSecondValue(myArray);
+console.log(returnSecondValue([200, 300, 400, 500, 500]));
