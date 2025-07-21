@@ -99,3 +99,45 @@ for (let index = 0; index < array.length; index++) {
 console.log(a);
 console.log(b);
 // console.log(c);
+
+
+// child function can access parent variables 
+function one(){
+    const username = "Suraj"
+    function two(){
+        const website = "suraj.com";
+        console.log(username);
+    }
+    two(); 
+    // console.log(website);  
+}
+one();
+
+
+// child parent rule on if-else.
+if(true){
+    const username = "Suraj Kumar";
+    if(username === "Suraj Kumar" ){
+       const website = "youtube.com";
+       console.log(username + ": " + website);
+    }
+    // console.log(website);
+}
+
+// console.log(username);
+
+// +++++++++++++++++++++++++ Interseting Example +++++++++++++++++++++++++
+
+// normal function: 
+console.log(addone(5)); // it can be called before declaration of function
+function addone(num){
+    return num+1; 
+}
+
+
+// expresion
+console.log(addTwo(5)); // it can't be called before declaration of function
+const addTwo = function(num){
+    return num + 2;
+}
+
