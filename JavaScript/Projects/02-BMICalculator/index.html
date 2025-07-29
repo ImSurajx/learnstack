@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set, viewport settings, and IE compatibility -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BMI Calculator</title>
+
+    <!-- Inline CSS to style the BMI Calculator page -->
+    <style>
+      /* Set basic styles for body */
+      body {
+        background: whitesmoke;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Style for input fields */
+      input[type="text"] {
+        height: 40px;
+        width: 200px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+        padding-left: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      /* Margin between label and input */
+      label {
+        margin-right: 10px;
+      }
+
+      /* Button styling */
+      button {
+        border: 0;
+        outline: 0;
+        padding: 15px 30px;
+        background: #000;
+        color: #fff;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+        border-radius: 8px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      /* Result output spacing */
+      #results {
+        margin-top: 10px;
+      }
+
+      /* Message output spacing */
+      #message {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <!-- BMI input form -->
+      <form>
+        <!-- Input field for height -->
+        <p>
+          <label>Height in CM: </label
+          ><input type="text" id="height" required />
+        </p>
+
+        <!-- Input field for weight -->
+        <p>
+          <label>Weight in KG: </label
+          ><input type="text" id="weight" required />
+        </p>
+
+        <!-- Submit button -->
+        <button>Calculate</button>
+
+        <!-- Result area for displaying BMI -->
+        <div id="results"></div>
+
+        <!-- BMI guide for reference -->
+        <div id="weight-guide">
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    // Selecting the form element
+    const form = document.querySelector("form");
+
+    // Attaching submit event to the form
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      let bmi;
+
+      // Grab values from input fields
+      const height = document.querySelector("#height").value;
+      const weight = document.querySelector("#weight").value;
+
+      // Area where result will be displayed
+      const results = document.querySelector("#results");
+
+      // Remove any previously displayed BMI messages
+      const oldMsg = document.getElementById("message");
+      if (oldMsg) {
+        oldMsg.remove();
+      }
+
+      // Input validation
+      if (height === "" || height < 0 || isNaN(height)) {
+        results.innerHTML = `Please give a valid height ${height}`;
+      } else if (weight === "" || weight < 0 || isNaN(weight)) {
+        results.innerHTML = `Please give a valid weight ${weight}`;
+      } else {
+        // Calculate BMI: weight (kg) / height² (m²)
+        bmi = (weight / ((height * height) / 10)).toFixed(2); // Corrected formula
+        results.innerHTML = `<span>BMI is ${bmi}</span>`;
+      }
+
+      // Create a new div for message
+      const weightGuide = document.createElement("div");
+      weightGuide.id = "message";
+
+      // Convert string BMI to float for comparison
+      bmi = parseFloat(bmi);
+
+      // Add corresponding message based on BMI value
+      if (bmi <= 18.6) {
+        weightGuide.innerText = "You are under weight.";
+      } else if (bmi > 18.6 && bmi < 24.9) {
+        weightGuide.innerText = "Your weight is normal.";
+      } else if (bmi >= 24.9) {
+        weightGuide.innerText = "You are over weight.";
+      }
+
+      // Insert the message after the results block
+      results.insertAdjacentElement("afterend", weightGuide);
+    });
+  </script>
+</html>
