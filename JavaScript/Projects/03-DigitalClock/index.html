@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set character encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- Make the website responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Set compatibility for older versions of Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Page title displayed in browser tab -->
+    <title>Your Local Time</title>
+
+    <!-- Internal CSS styling -->
+    <style>
+      /* Basic body styling */
+      body {
+        background-color: #212121; /* Dark background */
+        color: #fff; /* White text color */
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font stack */
+      }
+
+      /* Flexbox container to center content */
+      .center {
+        display: flex;
+        height: 100vh; /* Full viewport height */
+        justify-content: center; /* Center horizontally */
+        align-items: center;   /* Center vertically */
+        flex-direction: column; /* Stack children vertically */
+      }
+
+      /* Styling for the clock display */
+      #clock {
+        font-size: 40px; /* Large font */
+        background-color: orange; /* Orange background */
+        padding: 20px 50px; /* Spacing around the text */
+        margin-top: 10px; /* Space above clock */
+        border-radius: 10px; /* Rounded corners */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar is commented out and not visible on the page -->
+    <!--
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode">Youtube channel</a>
+    </nav>
+    -->
+
+    <!-- Main centered container -->
+    <div class="center">
+      <!-- Static text for heading -->
+      <div id="banner"><span>Your local time</span></div>
+
+      <!-- Dynamic clock display area -->
+      <div id="clock"></div>
+    </div>
+
+    <!-- JavaScript to update time every second -->
+    <script>
+        // Get the clock element from the DOM
+        const clock = document.getElementById('clock');
+
+        // Run the following function every 1000ms (1 second)
+        setInterval(function(){
+            let date = new Date(); // Get current date and time
+            clock.innerHTML = date.toLocaleTimeString(); // Format time and display it inside #clock
+        }, 1000); // 1000 milliseconds = 1 second
+    </script>
+  </body>
+</html>
