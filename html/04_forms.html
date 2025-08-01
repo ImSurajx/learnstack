@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formus</title>
+</head>
+
+<body>
+    <h1>Login form</h1>
+    <!-- taking input from user-->
+     <!--
+    we use html form to take input from user, input like email, name, dob, & many more & store it on server or create users there are many types of input inside form like text, radio, month, tel & color or many more we can learn these things on the go b/c we can't learn all at once.
+     -->
+    <form>
+        <label for="email">
+            email:
+            <input placeholder="enter your email" type="text" name="email" />
+        </label>
+        <label for="password">
+            password:
+            <input placeholder="enter your password" type="password" name="password" id="" />
+        </label>
+        <button type="reset">reset</button>
+    </form>
+    <div>
+        <h2>learning form</h2>
+        <form>
+            <label for="story">Tell us your story:</label>
+
+            <textarea id="story" name="story" rows="10" cols="50">
+                    It was a dark and stormy night...
+            </textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <form>
+        <label for="Games">
+            <select name="Games" id="">
+                <option value="Cricket">Cricket</option>
+                <option value="Baseball">Baseball</option>
+                <option value="Football">Football</option>
+                <option value="Hockey">Hockey</option>
+            </select>
+        </label>
+        <label for="months">
+            <input type="month" name="" id="">
+            <input type="color" name="" id="">
+            
+        </label>
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>

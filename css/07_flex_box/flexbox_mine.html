@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FlexBox Demo</h1>
+
+    <div class="container"> 
+    <h2>1. Default Flex (row)</h2>
+      <div class="flex-container" style="display: flex;">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>2. Flex Direction: Column</h2>
+      <div class="flex-container" style="display: flex; flex-direction: column;">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>3. Justify Content: Space-Between</h2>
+      <div class="flex-container" style="display: flex; justify-content: space-between; height: 400px">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>4. Align Items: Center</h2>
+      <div class="flex-container" style="display: flex; align-items: center; height: 400px;">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>5. Flex Wrap: Wrap</h2>
+      <div class="flex-container" style="display: flex; height: 400px; flex-wrap: wrap;">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>6. Align Content: Space-Around (with Wrap)</h2>
+      <div class="flex-container" style="display: flex; height: 400px; flex-wrap: wrap; align-content: space-between;">
+        <div class="square pastel-1">1</div>
+        <div class="square pastel-2">2</div>
+        <div class="square pastel-3">3</div>
+        <div class="square pastel-4">4</div>
+        <div class="square pastel-5">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>7. Order Property</h2>
+      <div class="flex-container" style="display: flex;">
+        <div class="square pastel-1" style="order:5">1</div>
+        <div class="square pastel-2" style="order:3">2</div>
+        <div class="square pastel-3" style="order:4">3</div>
+        <div class="square pastel-4" style="order:2;">4</div>
+        <div class="square pastel-5"style="order:1">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>8. Flex Grow</h2>
+      <div class="flex-container"  style="display: flex;">
+        <div class="square pastel-1" style="flex-grow: 1;">1</div>
+        <div class="square pastel-2" style="flex-grow: 3;">2</div>
+        <div class="square pastel-3" style="flex-grow: 2;">3</div>
+        <div class="square pastel-4" style="flex-grow: 5;">4</div>
+        <div class="square pastel-5" style="flex-grow: 2;">5</div>
+      </div>
+    </div>
+
+    <div class="container"> 
+    <h2>9. Align Self</h2>
+      <div class="flex-container" style="display: flex; height: 400px;">
+        <div class="square pastel-1" style="align-self: flex-start;">1</div>
+        <div class="square pastel-2" style="align-self: flex-end;">2</div>
+        <div class="square pastel-3" style="align-self: flex-baseline;">3</div>
+        <div class="square pastel-4" style="align-self: stretch; height: auto;">4</div>
+        <div class="square pastel-5" style="align-self: flex-end;">5</div>
+      </div>
+    </div>
+</body>
+</html>
