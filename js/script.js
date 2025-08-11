@@ -190,3 +190,205 @@ typeof 'NaN' // Not a Number; -> Quirks
 // Truthy vs Falsy values: 
 // Falsy: 0, false, "", null, undefined, NaN, document.all; to check write any value & just put two !! sign just before it like : !!0, !!false, !!null
 // Truthy: Except Falsy Everthing is true.
+
+// CHAPTER 3: OPERATORS
+// Arithmetic, Comparision, Logical, Assignment, Unary, Ternary
+
+// Arithmetic Operators
+// + - / * % **
+console.log(1 + 2); // addition
+console.log("su"+ "raj"); // concat using +
+console.log(12/6); // divide
+console.log(12*2); // multiplication
+console.log(12%5); // give remainder
+console.log(12**2); // a^b
+
+// Comparision Operators
+let x = 5;
+let y = 10;
+console.log(a = 13); // assigning values
+console.log(x == y); // false :: not strict comparision
+console.log(x === y); // false :: strict comparision
+console.log(x != y); // true :: not strict comparision
+console.log(x !== y); // true :: strict comparision
+console.log(x < y); // true
+console.log(x > y); // false
+console.log(x >= y); // flase
+console.log(x <= y); // true
+
+// Assignment Operators
+console.log(x = 1);//  (x = 1) assigning values: put 1 inside x name variables
+console.log(x += 1);// (x = x + 1)
+console.log(x -= 1);// (x = x - 1)
+console.log(x *= 1);// (x = x * 1)
+console.log(x /= 1);// (x = x / 1)
+console.log(x %= 1);// (x = x % 1)
+
+// Logical Operators
+// && || !
+// && : Both Codition must be true to get true else it's false;
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && false); // false
+
+// || : Any one condition must be true to get true else it's false.
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || false); // false
+
+// !  : Reverse the answer if it's true then it's become flase, if it's false then it's become true
+console.log(!true); // false
+console.log(!false); // true
+console.log(!!true); // ture
+console.log(!!false); // false
+
+
+// Unary Operators: that only works on only single value
+// + - ! typeof ++ --
+console.log(+"5"); // convert string into number;
+console.log(+"suraj"); // not possible b/c not a single char so it's give NaN
+console.log(!true); // reverse the boolean values
+console.log(typeof a); // return data type
+let z = 1;
+console.log(z++); // post increment
+console.log(++z); // pre increment
+console.log(--z); // pre decrement
+console.log(z--); // post decrement
+
+// Ternary Operators: ?:
+// condition? if ture: if false;
+console.log(14>15?14+15:14-15);
+console.log(14<15?14+15:14-15);
+
+
+// typeof & instanceof
+
+// typeof : what is the type of data
+console.log(typeof null); // object
+console.log(typeof []); // array
+console.log(typeof {}); // object
+console.log(typeof function(){}); // function
+console.log(typeof NaN); // function
+
+// instanceof : only work with refernce values
+const j = [ 1, 2, 3, 4];
+const b = {};
+console.log(j instanceof Array);
+console.log(b instanceof Object);
+
+// Practice Session
+// Q1: Predict the output
+let x = 10;
+let y = 20;
+if(x > 5 && y < 25){
+    console.log("A"); // A
+} else {
+    console.log("B");
+}
+
+// Q2: Predict the output
+let isAdmin = true;
+let isLoggedIn = false;
+if(isAdmin || isLoggedIn){
+    console.log("Acess Granted"); // Acess Granted
+} else{
+    console.log("Acess Denied");
+}
+
+// Q3: Predict the output
+let temp = 35;
+if(!(temp < 30)){
+    console.log("Hot"); // Hot
+} else{
+    console.log("Pleasant");
+}
+
+// Q4: Predict the output
+let a = 0;
+if(a){
+    console.log("Truthy");
+} else {
+    console.log("Falsy"); // Falsy
+}
+
+// Q5: Predict the output
+let score = 78;
+let grade = score >= 90? "A" : score >= 75 ? "B" : score >= 60? "C" : "Fail"; 
+console.log(grade);  // B
+
+// Q6: Predict the output
+let points = 120;
+let status = points > 100 ? "Gold" : points > 50 ? "Silver" : "Bronze";
+console.log(status); // Gold
+
+// Q7: Predict the output
+let loggedIn = true;
+let hasToken = false;
+let access = loggedIn && hasToken? "Allow" : "Deny";
+console.log(access); // Deny
+
+// Q8: Predict the output
+let a = 5;
+a++;
+console.log(a); // 6
+
+// Q9: Predict the output
+let b = 7;
+++b;
+console.log(b); // 8
+
+// Q10: Predict the output
+let x = 3;
+let y = x++;
+console.log(x, y); // 4, 3
+
+// Q11: Predict the output
+let p = 4;
+let q = ++p;
+console.log(p, q); // 5, 5
+
+// Q12: Predict the output
+let m = 10;
+console.log(m--); // 10
+console.log(m); // 9
+
+// Q13: Predict the output
+let n = 5;
+let result = n++ + ++n; // 5 + 7
+console.log(result); // 12
+
+// Q14: Predict the output
+let likes = 100;
+
+function likePost(){
+    return ++likes;
+}
+
+console.log(likePost()); // 101
+console.log(likes); // 101
+
+// Q15: Predict the output
+let count = 5;
+if(count-- === 5){
+    console.log("Matched"); // Matched
+} else{
+    console.log("Not Matched");
+}
+
+Personal Practice
+// Question 1: Combined Arithmetic and Assignment
+let a = 5;
+let b = 10;
+let c = --a + b++ - --b; // 4 + 10 - 10 so c =  4, a = 4, b = 10
+
+// Question 2: Logical Operators and Short-Circuiting
+let x = 1; // 2
+let y = 1; // 1
+let z = 0; // 2
+z = ++x || y--; // z = 2 || y =  so z = 2; b/c The logical OR (||) operator checks the value on its left. If the value is "truthy" (any number other than 0 is truthy in JavaScript), it doesn't need to evaluate the right side of the expression. The result of the left side is immediately returned.
+console.log(z);
+
+// Question 3: Complex Assignment Chain
+let i = 10;
+i = i++; // i = (i + 1) // 10 b/c The Catch: The increment to 11 happens, but it's immediately overwritten by the assignment of the original value. The final value stored in i is 10.
+console.log(i);
