@@ -61,6 +61,19 @@ This is a personal learning repo, but if you’re also taking the same course an
 
 ---
 
+## Project Status Update
+
+**Currently, this repository (`learnstack`) is not under active development.**
+
+The self-learning efforts on this project have been paused to allow for dedicated focus on the 
+
+**Sheryians Coding School 2.0 Job Ready AI Powered Cohort: Web + DSA + Aptitude** course.
+
+This structured learning program includes comprehensive full-stack web development, Data Structures and Algorithms (DSA), and AI integration, and the aim is to leverage this formal education for career readiness.
+
+This project may be revisited and continued in the future.
+---
+
 ## 📬 Contact
 
 **Suraj Kumar**  
